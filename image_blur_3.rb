@@ -12,7 +12,7 @@ class Image
   end
 
   def transform(number)
-    n = number.to_s.to_i
+    n = number.to_i
 
     n.times do
       # Serialize @bitmap into binary to store locations of "1's" to be reconstituted when needed
