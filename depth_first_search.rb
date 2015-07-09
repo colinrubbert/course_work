@@ -11,7 +11,7 @@ end
 def find_node(node, search_value)
   if node.payload == search_value
     puts "returning #{node.payload}"
-    return node
+    node
   else
     # Loop through the branches and leaves to find the eleventh_node
     node.children.each do |child|
