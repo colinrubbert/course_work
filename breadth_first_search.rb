@@ -21,23 +21,19 @@ class Queue
     def dequeue
         @queue.shift
     end
+
+    def breadth_first(node, value)
+      return "value not found" if node.nil?
+      node.children.each do |child|
+        enqueue(child)
+        return "value found = #{value}" if child.payload == value
+      end
+      current_node = dequeue
+      breadth_first(current_node, value)
+    end
+
 end
 
-
-queue = Queue.new
-
-queue.enqueue(1)
-queue.enqueue(2)
-puts queue.dequeue
-queue.enqueue(3)
-queue.enqueue(4)
-queue.enqueue(5)
-puts queue.dequeue
-queue.enqueue(6)
-puts queue.dequeue
-puts queue.dequeue
-puts queue.dequeue
-puts queue.dequeue
 
 # Outputs: 1, 2, 3, 4, 5, 6
 
@@ -55,4 +51,6 @@ seventh_node = Tree.new(7, [sixth_node])
 fifth_node = Tree.new(5, [ninth_node])
 
 # The "Trunk" of the tree
-trunk   = Tree.new(2, [seventh_node, fifth_node])
+trunk = Tree.new(2, [seventh_node, fifth_node])
+queue = Queue.new
+puts queue.breadth_first(trunk, 11)
