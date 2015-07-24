@@ -26,7 +26,6 @@ end
 puts recursive_fibonacci(35)
 puts iterative_fibonacci(35)
 
-
 # Benchmark both of the fibonacci sequences
 require 'benchmark'
 num = 35
