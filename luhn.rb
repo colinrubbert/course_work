@@ -3,9 +3,9 @@ require 'minitest/autorun'
 module Luhn
 	def self.is_valid?(number)
     digits = []
-    sum = 0
     number = number.to_s.split("").each {|n| digits << n.to_i }
 
+		sum = 0
     digits.reverse!
     digits.each_with_index do |i, index|
       ip = index + 1
@@ -22,9 +22,9 @@ module Luhn
     end
 
     if sum % 10 == 0
-      return true
+      true
     else
-      return false
+      false
     end
 
 	end
