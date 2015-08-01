@@ -1,4 +1,4 @@
-# Project Euler Problem: Find all numbers with multiples of 3 or 5 up to 1000
+# Project Euler Problem 1: Find all numbers with multiples of 3 or 5 below 1000 then find the sum of the numbers found
 
 def find_multiples
 
@@ -8,7 +8,7 @@ def find_multiples
 
 
   multiples.each do |m|
-    if (m % 3 == 0 || m % 5 == 0)
+    if (m % 3 == 0 || m % 5 == 0) && m < 1000
       found_numbers << m
     end
   end
