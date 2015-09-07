@@ -11,15 +11,6 @@ def collatz(n)
     end
   end
 
-  # Prints out the Sequence Numbers
-  # longest_sequence.each do |ls|
-  #   if ls == 1
-  #     puts ls
-  #   else
-  #     puts "#{ls} --> "
-  #   end
-  # end
-
   puts "Sequence length is #{longest_sequence.count}"
 end
 
